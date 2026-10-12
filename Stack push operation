@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int stack[100], top = -1;
+    int size, value;
+
+    cout << "Enter stack size: ";
+    cin >> size;
+
+    // PUSH operation
+    if(top == size - 1)
+    {
+        cout << "Stack Overflow";
+    }
+    else
+    {
+        cout << "Enter value to push: ";
+        cin >> value;
+
+        top++;
+        stack[top] = value;
+
+        cout << "Element pushed successfully!";
+    }
+
+    // Display stack
+    cout << "\nStack elements: ";
+    for(int i = top; i >= 0; i--)
+    {
+        cout << stack[i] << endl;
+    }
+
+    return 0;
+}
